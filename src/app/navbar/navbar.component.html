@@ -1,0 +1,47 @@
+<div>
+    <div class="fixed top-0 left-0 right-0 z-50 h-20 px-20 bg-[#000000] flex justify-between items-center text-white ">
+
+        <div class="leftContent flex items-center space-x-5 font-medium ">
+            <h4 class="logo !m-0 inline-block px-4 bg-[#000000] text-white rounded-full">
+              vas<span class="text-yellow-400 font-bold">त्रा</span>
+            </h4>
+
+            <a routerLink="/">Shop With Vastraa</a>
+            <button (click)="openNavbarContent('men')" >Men</button>
+            <button (click)="openNavbarContent('women')" >Women</button>
+        </div>
+
+        <div class="rightContent text-white flex items-center space-x-4 font-medium">
+
+            <button class="!text-white" (click)="navigatToCart('cart')" mat-icon-button>
+              <span class="material-icons">shopping_cart</span>
+            </button>
+
+            <button *ngIf="false" class="bg-transparent rounded-md border-2 px-2.5 py-1 border-black hover:bg-pink-700 transition">Login</button>
+            
+            <div *ngIf="true" class="flex items-center">
+            <span class="font-semibold mr-2">Prince</span>
+            <button [matMenuTriggerFor]="profileMenu">
+                <img
+                  src="https://ichef.bbci.co.uk/ace/standard/819/cpsprodpb/e986/live/8e631380-24ab-11ef-8fcf-bdfddcab4264.jpg"
+                  alt="Profile"
+                  class="h-[48px] w-[48px] rounded-full object-cover border-2 border-white shadow-md"
+                />
+            </button>
+            </div>
+
+            <mat-menu #profileMenu="matMenu">
+              <button mat-menu-item>Profile</button>
+              <button mat-menu-item>Order</button>
+              <button mat-menu-item>Logout</button>
+            </mat-menu>
+
+        </div>
+
+      </div>
+      
+      <div class="" *ngIf="isNavbarContentOpen" class="modal-container">
+        <app-nav-content [selectedSection]="currentSection" ></app-nav-content>
+      </div>
+
+</div>
