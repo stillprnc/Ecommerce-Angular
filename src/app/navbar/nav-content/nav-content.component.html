@@ -1,12 +1,26 @@
 <div class="w-full">
     
-    <div class="bg-yellow-950 text-white h-1/2 shadow-lg p-6"> 
+    <div class="bg-[#1c1b1b] text-white h-1/2 rounded-b-lg shadow-lg p-6"> 
 
         <div class="flex justify-around">
 
             <div class="flex flex-col" *ngFor="let item of category[selectedSection].sections">
-                <h1 class="text-center" >{{item.name}}</h1>
-                <button *ngFor="let section of item.items"> {{section.name}} </button>
+                <h2 class="text-center !text-3xl  text-[rgb(229,75,47)]" >{{item.name}}</h2>
+                <button *ngFor="let section of item.items" class="p-1 text-left"> {{section.name}} </button>
+            </div>
+
+            <div class="hidden lg:block">
+                <div class="mb-5">
+                    <img src="https://pbs.twimg.com/media/E_8HL_PX0AEvclf.jpg:large" class="w-[17rem] h-[18rem] object-cover object-top rounded-md" alt="">
+                </div>
+                <p>New Arrival</p>
+            </div>
+
+            <div class="hidden lg:block">
+                <div class="mb-5">
+                    <img src="https://esq.h-cdn.co/assets/17/28/1600x1200/sd-aspect-1499965095-conor-mcgregor.jpg" class="w-[18rem] h-[19rem] object-cover object-top rounded-md" alt="">
+                </div>
+                <p>New Arrival</p>
             </div>
 
         </div>

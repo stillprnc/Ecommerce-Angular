@@ -40,8 +40,9 @@
 
       </div>
       
-      <div class="" *ngIf="isNavbarContentOpen" class="modal-container">
+      <div class="" *ngIf="isNavbarContentOpen" class="modal-container fixed top-20 left-1/2 transform -translate-x-1/2 w-[90%] max-w-[1380px] shadow-lg z-40 rounded-xl">
         <app-nav-content [selectedSection]="currentSection" ></app-nav-content>
       </div>
-
-</div>
+      
+    </div>
+    

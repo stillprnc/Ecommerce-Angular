@@ -10,20 +10,23 @@ export const navigatoin = {
                 id:'clothing',
                 name:'Clothing',
                 items:[
-                    {name:'Re-Arranged', id:'#'},
-                    {name:'Counterfeit', id:'#'},
-                    {name:'Full-Nelson', id:'#'},
-                    {name:'My-Way', id:'#'}
+                    {name:'Dresses', id:'#'},
+                    {name:'T-Shirts', id:'#'},
+                    {name:'Sarees', id:'#'},
+                    {name:'Kurtas', id:'#'},
+                    {name:'Gouns', id:'#'},
+                    {name:'Tops', id:'#'}
                 ]
             },
             {
                 id:'accessories',
                 name:'Accessories',
                 items:[
-                    {name:'Re-Arranged', id:'#'},
-                    {name:'Counterfeit', id:'#'},
-                    {name:'Full-Nelson', id:'#'},
-                    {name:'My-Way', id:'#'}
+                    {name:'Sunglasses', id:'#'},
+                    {name:'Watches', id:'#'},
+                    {name:'Wallets', id:'#'},
+                    {name:'Belts', id:'#'},
+                    {name:'Bags', id:'#'}
                 ]
             },
             {
@@ -47,20 +50,23 @@ export const navigatoin = {
                 id:'clothing',
                 name:'Clothing',
                 items:[
-                    {name:'Re-Arranged', id:'#'},
-                    {name:'Counterfeit', id:'#'},
-                    {name:'Full-Nelson', id:'#'},
-                    {name:'My-Way', id:'#'}
+                    {name:'Dresses', id:'#'},
+                    {name:'T-Shirts', id:'#'},
+                    {name:'Sarees', id:'#'},
+                    {name:'Kurtas', id:'#'},
+                    {name:'Gouns', id:'#'},
+                    {name:'Tops', id:'#'}
                 ]
             },
             {
                 id:'accessories',
                 name:'Accessories',
                 items:[
-                    {name:'Re-Arranged', id:'#'},
-                    {name:'Counterfeit', id:'#'},
-                    {name:'Full-Nelson', id:'#'},
-                    {name:'My-Way', id:'#'}
+                    {name:'Sunglasses', id:'#'},
+                    {name:'Watches', id:'#'},
+                    {name:'Wallets', id:'#'},
+                    {name:'Belts', id:'#'},
+                    {name:'Bags', id:'#'}
                 ]
             },
             {
