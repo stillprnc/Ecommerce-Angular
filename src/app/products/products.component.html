@@ -1,0 +1,90 @@
+<div class="bg-black text-white h-full mt-10 py-6 px-24 rounded-b-xl">
+
+    <div class="heading flex justify-between">
+        <h3 class="!m-0">Products</h3>
+        <div class="flex items-center space-x-3">
+            <p class="!mb-1">Sort</p>
+            <button class="" mat-icon-button aria-label="Grid view">
+              <mat-icon class="!rounded-3xl">grid_view</mat-icon>
+            </button>
+        </div>
+    </div>
+
+    <div class="mt-8">
+        <mat-divider></mat-divider>
+    </div>
+
+    <div class="flex gap-6 mt-8">
+
+        <aside class="w-1/5">
+            <h3 class="!text-3xl flex items-center justify-between">
+              Filters 
+              <button>
+                  <div class="flex flex-col items-center gap-1">
+                    <div class="w-6 h-0.5 bg-white"></div>
+                    <div class="w-4 h-0.5 bg-white"></div>
+                    <div class="w-2 h-0.5 bg-white"></div>
+                  </div>
+              </button>
+            </h3>
+      
+            <div *ngFor="let item of filterData">
+              <div class="my-6">
+                  <p class="font-semibold">{{item.name}}</p>
+                  <mat-divider></mat-divider>
+              </div>
+  
+                <div class="flex flex-col gap-2">
+                  <div *ngFor="let option of item.options" class="flex items-center">
+                    <mat-checkbox class="custom-checkbox">
+                      <span class="text-[16px] font-medium">{{ option.label }}</span>
+                    </mat-checkbox>
+                  </div>
+                </div>
+            </div>
+
+            <div *ngFor="let item of singleFilter">
+              <div class="my-6">
+                <p class="font-semibold">{{ item.name }}</p>
+                <mat-divider></mat-divider>
+              </div>
+            
+              <div class="flex flex-col gap-3">
+                <mat-radio-group>
+                  <div *ngFor="let option of item.options" class="flex items-center gap-2 my-1">
+                    <mat-radio-button [value]="option.value" class="custom-radio">
+                      <span class="text-[16px] font-medium">{{ option.label }}</span>
+                    </mat-radio-button>
+                  </div>
+                </mat-radio-group>
+              </div>
+            </div>
+        </aside>
+
+        <!-- Products Grid -->
+        <div class="w-4/5">
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6" >
+
+            <!-- Product Card -->
+            <div class="bg-gray-900 p-4 rounded-lg" *ngFor="let item of mensPantsPage1">
+              <img class="mb-4 rounded w-full object-contain h-[340px]" src="{{item.imageUrl}}" alt="Kurta" />
+              <p class="text-sm text-gray-400"> {{item.brand}} </p>
+              <p class="font-semibold text-white"> {{item.title}} </p>
+              <p class="text-sm text-gray-400"> {{item.color}} </p>
+              <p class="text-green-400 font-bold mt-1">
+                &#x20B9;{{item.discountedPrice}} <span class="line-through text-gray-500 ml-2"> {{item.price}} </span> <span class="ml-2 text-green-500">75%</span>
+              </p>
+            </div> 
+
+          </div>
+
+        </div>
+    
+    </div>
+
+
+</div>
+
+
+
