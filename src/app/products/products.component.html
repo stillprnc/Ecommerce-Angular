@@ -36,7 +36,7 @@
   
                 <div class="flex flex-col gap-2">
                   <div *ngFor="let option of item.options" class="flex items-center">
-                    <mat-checkbox class="custom-checkbox">
+                    <mat-checkbox (click)="handleMultipleSelectFilter(option.value, item.id)" class="custom-checkbox">
                       <span class="text-[16px] font-medium">{{ option.label }}</span>
                     </mat-checkbox>
                   </div>
@@ -52,13 +52,14 @@
               <div class="flex flex-col gap-3">
                 <mat-radio-group>
                   <div *ngFor="let option of item.options" class="flex items-center gap-2 my-1">
-                    <mat-radio-button [value]="option.value" class="custom-radio">
+                    <mat-radio-button (click)="handleSingleSelectFilter(option.value, item.id)" [value]="option.value" class="custom-radio">
                       <span class="text-[16px] font-medium">{{ option.label }}</span>
                     </mat-radio-button>
                   </div>
                 </mat-radio-group>
               </div>
             </div>
+
         </aside>
 
         <!-- Products Grid -->
@@ -68,13 +69,7 @@
 
             <!-- Product Card -->
             <div class="bg-gray-900 p-4 rounded-lg" *ngFor="let item of mensPantsPage1">
-              <img class="mb-4 rounded w-full object-contain h-[340px]" src="{{item.imageUrl}}" alt="Kurta" />
-              <p class="text-sm text-gray-400"> {{item.brand}} </p>
-              <p class="font-semibold text-white"> {{item.title}} </p>
-              <p class="text-sm text-gray-400"> {{item.color}} </p>
-              <p class="text-green-400 font-bold mt-1">
-                &#x20B9;{{item.discountedPrice}} <span class="line-through text-gray-500 ml-2"> {{item.price}} </span> <span class="ml-2 text-green-500">75%</span>
-              </p>
+              <app-product-card [product]="item"></app-product-card>
             </div> 
 
           </div>

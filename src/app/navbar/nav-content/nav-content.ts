@@ -10,7 +10,7 @@ export const navigatoin = {
                 id:'clothing',
                 name:'Clothing',
                 items:[
-                    {name:'Dresses', id:'#'},
+                    {name:'Jeans', id:'#'},
                     {name:'T-Shirts', id:'#'},
                     {name:'Sarees', id:'#'},
                     {name:'Kurtas', id:'#'},
