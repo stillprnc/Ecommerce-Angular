@@ -1,7 +1,7 @@
 import { isPlatformBrowser, CommonModule } from '@angular/common';
 import { Component, Inject, OnDestroy, OnInit, PLATFORM_ID } from '@angular/core';
 import { RouterLink } from '@angular/router';
-import { homeCarouselData } from '../../../Data/MainCarousel';
+import { homeCarouselData } from '../../../../../../Data/MainCarousel';
 
 
 
@@ -19,7 +19,7 @@ export class MainCarouselComponent implements OnInit, OnDestroy
   intervalId: any;
   carouselData: any[] = [];
 
-   constructor(@Inject(PLATFORM_ID) private platformId: Object) {}
+  constructor(@Inject(PLATFORM_ID) private platformId: Object) {}
 
   ngOnInit() {
     this.carouselData = homeCarouselData;

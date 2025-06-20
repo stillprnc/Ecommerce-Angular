@@ -1,13 +1,13 @@
 import { Routes } from '@angular/router';
-import { HomeComponent } from './home/home.component';
-import { ProductsComponent } from './products/products.component';
-import { CartComponent } from './cart/cart.component';
-import { ProductDetailsPageComponent } from './product-details-page/product-details-page.component';
-import { CheckoutComponent } from './checkout/checkout.component';
-import { PaymentComponent } from './payment/payment.component';
-import { PaymentSuccessComponent } from './payment-success/payment-success.component';
-import { OrderComponent } from './order/order.component';
-import { OrderDetailsComponent } from './order-details/order-details.component';
+import { HomeComponent } from './Module/feature/Component/home/home.component';
+import { ProductsComponent } from './Module/feature/Component/home/products/products.component';
+import { CartComponent } from './Module/feature/Component/cart/cart.component';
+import { ProductDetailsPageComponent } from './Module/feature/Component/product-details-page/product-details-page.component';
+import { CheckoutComponent } from './Module/feature/Component/checkout/checkout.component';
+import { PaymentComponent } from './Module/feature/Component/payment/payment.component';
+import { PaymentSuccessComponent } from './Module/feature/Component/payment-success/payment-success.component';
+import { OrderComponent } from './Module/feature/Component/order/order.component';
+import { OrderDetailsComponent } from './Module/feature/Component/order-details/order-details.component';
 
 export const routes: Routes = [
     {path:"", component:HomeComponent},
@@ -20,3 +20,4 @@ export const routes: Routes = [
     {path:"account/orders", component:OrderComponent},
     {path:"order/:id", component:OrderDetailsComponent}
 ];
+ 

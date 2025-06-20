@@ -6,10 +6,10 @@ import { filters, singleFilter } from './filterData';
 import { FormsModule } from '@angular/forms';
 import { MatRadioModule } from '@angular/material/radio';
 import { MatCheckboxModule } from '@angular/material/checkbox';
-import { mensPantsPage1 } from '../../Data/pants/men_page1';
-import { ProductCardComponent } from '../shared-module/product-card/product-card.component';
+import { ProductCardComponent } from '../../../../shared/Component/product-card/product-card.component';
 import { ActivatedRoute } from '@angular/router';
 import { Router } from '@angular/router';
+import { mensPantsPage1 } from '../../../../../../Data/pants/men_page1';
 
 @Component({
   selector: 'app-products',

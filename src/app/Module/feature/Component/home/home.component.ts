@@ -1,16 +1,18 @@
 import { Component, OnInit } from '@angular/core';
 import { MainCarouselComponent } from './main-carousel/main-carousel.component';
 import { ProductSliderComponent } from './product-slider/product-slider.component';
-import { menJeans } from '../../Data/Men/men_jeans';
-import { gounsPage1 } from '../../Data/Gouns/gouns';
-import { lehngacholiPage2 } from '../../Data/Saree/lenghaCholiPage2';
-import { mens_kurta } from '../../Data/Men/men_kurta';
-import { mensShoesPage1 } from '../../Data/Shoes/shoes';
+import { menJeans } from '../../../../../Data/Men/men_jeans';
+import { gounsPage1 } from '../../../../../Data/Gouns/gouns';
+import { lehngacholiPage2 } from '../../../../../Data/Saree/lenghaCholiPage2';
+import { mens_kurta } from '../../../../../Data/Men/men_kurta';
+import { mensShoesPage1 } from '../../../../../Data/Shoes/shoes';
+import { NavbarComponent } from '../../../shared/Component/navbar/navbar.component';
+import { FooterComponent } from '../../../shared/Component/footer/footer.component';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [MainCarouselComponent,ProductSliderComponent],
+  imports: [NavbarComponent,MainCarouselComponent,ProductSliderComponent,FooterComponent],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css'
 })
