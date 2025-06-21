@@ -1,1 +1,252 @@
-<p class="py-10">product-details-page works!</p>
+<div class="px-24 py-6">
+
+  <section class="mt-4">
+    <p class="font-medium text-2xl text-[#ffffffc9] !mb-8">Product-Details</p>
+
+        <div class="flex">
+            <div>
+                <img
+                  class="max-w-[500px] max-h-[500px] rounded-xl object-contain"
+                  src="https://i.pinimg.com/736x/26/8b/47/268b471ac20215e83875d5a5a7d769da.jpg"
+                  alt="Product"
+                />
+            </div>
+
+            <div class="w-full flex flex-col justify-center ml-10">
+                
+                <p class="text-lg font-semibold text-gray-400 !mb-6">Nofilter</p>
+                <h2 class="!text-4xl font-semibold">Men Solid Pure Cotton Straight Kurta</h2>
+            
+                <div class="flex items-center gap-4 mb-6">
+                  <span class="text-xl font-bold">₹393</span>
+                  <span class="line-through text-gray-500">₹1,599</span>
+                  <span class="text-green-500 font-semibold">75% off</span>
+                </div>
+            
+            
+                <div class="mb-6">
+                  
+                  <p class="mt-4 text-gray-400 font-semibold text-lg">Size</p>
+                  <mat-radio-group [(ngModel)]="selectedSizeAdmin" class="flex items-center gap-2 my-1">
+                    <mat-radio-button class="custom-radio" [value]="'S'">
+                      <span class="text-[16px] font-medium"> S </span>
+                    </mat-radio-button>
+                    <mat-radio-button class="custom-radio" [value]="'M'">
+                      <span class="text-[16px] font-medium"> M </span>
+                    </mat-radio-button>
+                    <mat-radio-button class="custom-radio" [value]="'L'">
+                      <span class="text-[16px] font-medium"> L </span>
+                    </mat-radio-button>
+                    <mat-radio-button class="custom-radio" [value]="'XL'">
+                      <span class="text-[16px] font-medium"> XL</span>
+                    </mat-radio-button>
+                  </mat-radio-group>
+
+                </div>
+            
+            
+                <button (click)="handleAddToCartAdmin()" class="bg-green-400 hover:bg-green-500 text-black px-6 py-2 rounded w-full max-w-xs">
+                  Add To Cart
+                </button>
+
+                <div class="mt-4 w-[90%]">
+                  <p class="text-[#5c5c5cc9]">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam ipsum, minus repellendus iusto 
+                    omnis ut recusandae libero modi, fuga consequuntur id. Voluptatem mollitia, aut consequuntur suscipit impedit 
+                    ducimus corporis modi!
+                  </p>
+                  <p class="text-[#5c5c5cc9]">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam ipsum, minus repellendus iusto 
+                    omnis ut recusandae libero modi, fuga consequuntur id. Voluptatem mollitia, aut consequuntur suscipit impedit 
+                    ducimus corporis modi!
+                  </p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    
+    
+    <section class="mt-16">
+      <p class="font-medium text-2xl rounded-md text-[#ffffffc9] !mb-4">Recent Review and Ratings</p>
+
+        <div class="flex w-full">
+
+            <div class="w-[50%] flex flex-col gap-8 p-8">
+
+              <div *ngFor="let item of reviews">
+                <app-product-review-card></app-product-review-card>
+              </div>
+              
+            </div>
+
+            <div class="w-[50%] flex flex-col gap-6 p-8">
+                
+              <div class="bg-zinc-900 rounded-lg p-6" style="box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);">
+                <h3 class="text-base font-semibold mb-2">Product Ratings</h3>
+                <div class="flex items-center mb-2">
+                  <span class="text-yellow-400 text-xl">★ ★ ★ ★</span>
+                  <span class="text-gray-600 text-xl">★</span>
+                  <span class="ml-2 text-gray-400 text-sm">42807 Ratings</span>
+                </div>       
+      
+
+                <div class="space-y-4 text-sm">       
+
+                  <div>
+                    <div class="flex justify-between">
+                      <span>Excellent</span>
+                      <span>19259</span>
+                    </div>
+                    <div class="h-2 bg-gray-800 rounded">
+                      <div class="h-full bg-purple-600 rounded w-3/5"></div>
+                    </div>
+                  </div>       
+
+                  <div>
+                    <div class="flex justify-between">
+                      <span>Very Good</span>
+                      <span>19259</span>
+                    </div>
+                    <div class="h-2 bg-gray-800 rounded">
+                      <div class="h-full bg-purple-600 rounded w-3/5"></div>
+                    </div>
+                  </div>       
+
+                  <div>
+                    <div class="flex justify-between">
+                      <span>Good</span>
+                      <span>19259</span>
+                    </div>
+                    <div class="h-2 bg-gray-800 rounded">
+                      <div class="h-full bg-purple-600 rounded w-3/5"></div>
+                    </div>
+                  </div>       
+
+                  <div>
+                    <div class="flex justify-between">
+                      <span>Average</span>
+                      <span>19259</span>
+                    </div>
+                    <div class="h-2 bg-gray-800 rounded">
+                      <div class="h-full bg-purple-600 rounded w-3/5"></div>
+                    </div>
+                  </div>       
+
+                  <div>
+                    <div class="flex justify-between">
+                      <span>Poor</span>
+                      <span>19259</span>
+                    </div>
+                    <div class="h-2 bg-gray-800 rounded">
+                      <div class="h-full bg-purple-600 rounded w-3/5"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- <section>
+      <div class="bg-black text-white p-6 min-h-screen">
+        <h2 class="text-xl font-semibold mb-6">Recent Review & Ratings</h2>       
+
+        <div class="flex flex-col lg:flex-row gap-6">       
+
+          <div class="flex flex-col gap-4 flex-1">       
+
+            <div class="bg-zinc-900 rounded-lg p-4 shadow">
+              <div class="flex items-center gap-4 mb-2">
+                <img src="https://i.pravatar.cc/48" alt="User" class="w-10 h-10 rounded-full">
+                <div>
+                  <p class="font-bold">item.user.firstName</p>
+                  <p class="text-sm text-gray-400">April 5, 2023</p>
+                </div>
+              </div>       
+
+              <div class="flex items-center mb-2">
+                <span class="text-yellow-400">★ ★ ★ ★</span>
+                <span class="text-gray-600">★</span>
+              </div>       
+
+              <p class="text-gray-300">item.review</p>
+            </div>       
+      
+
+          </div>       
+      
+
+          <div class="bg-zinc-900 rounded-lg p-6 shadow w-full lg:w-[300px]">
+            <h3 class="text-lg font-semibold mb-2">Product Ratings</h3>
+            <div class="flex items-center mb-4">
+              <span class="text-yellow-400 text-xl">★ ★ ★ ★</span>
+              <span class="text-gray-600 text-xl">★</span>
+              <span class="ml-2 text-gray-400 text-sm">42807 Ratings</span>
+            </div>       
+      
+
+            <div class="space-y-2 text-sm">       
+
+              <div>
+                <div class="flex justify-between">
+                  <span>Excellent</span>
+                  <span>19259</span>
+                </div>
+                <div class="h-2 bg-gray-800 rounded">
+                  <div class="h-full bg-purple-600 rounded w-3/5"></div>
+                </div>
+              </div>       
+
+              <div>
+                <div class="flex justify-between">
+                  <span>Very Good</span>
+                  <span>19259</span>
+                </div>
+                <div class="h-2 bg-gray-800 rounded">
+                  <div class="h-full bg-purple-600 rounded w-3/5"></div>
+                </div>
+              </div>       
+
+              <div>
+                <div class="flex justify-between">
+                  <span>Good</span>
+                  <span>19259</span>
+                </div>
+                <div class="h-2 bg-gray-800 rounded">
+                  <div class="h-full bg-purple-600 rounded w-3/5"></div>
+                </div>
+              </div>       
+
+              <div>
+                <div class="flex justify-between">
+                  <span>Average</span>
+                  <span>19259</span>
+                </div>
+                <div class="h-2 bg-gray-800 rounded">
+                  <div class="h-full bg-purple-600 rounded w-3/5"></div>
+                </div>
+              </div>       
+
+              <div>
+                <div class="flex justify-between">
+                  <span>Poor</span>
+                  <span>19259</span>
+                </div>
+                <div class="h-2 bg-gray-800 rounded">
+                  <div class="h-full bg-purple-600 rounded w-3/5"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </section> -->
+
+</div>

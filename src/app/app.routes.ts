@@ -18,6 +18,7 @@ export const routes: Routes = [
     {path:':lavelOne/:lavelTwo/:lavelThree', component:ProductsComponent},
     {path:"payment-success", component:PaymentSuccessComponent},
     {path:"account/orders", component:OrderComponent},
-    {path:"order/:id", component:OrderDetailsComponent}
+    {path:"order/:id", component:OrderDetailsComponent},
+    {path:"admin", loadChildren:()=>import("./Module/admin/admin.routes").then(m=>m.adminRoutes)}
 ];
  
