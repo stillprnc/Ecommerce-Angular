@@ -68,26 +68,25 @@
 
     
     
-    <section class="mt-16">
+    <section class="mt-14">
       <p class="font-medium text-2xl rounded-md text-[#ffffffc9] !mb-4">Recent Review and Ratings</p>
 
         <div class="flex w-full">
 
-            <div class="w-[50%] flex flex-col gap-8 p-8">
+            <div class="w-[38%] flex flex-col gap-8 p-8">
 
-              <div *ngFor="let item of reviews">
+              <div class="bg-zinc-900 rounded-2xl" *ngFor="let item of reviews">
                 <app-product-review-card></app-product-review-card>
               </div>
               
             </div>
 
-            <div class="w-[50%] flex flex-col gap-6 p-8">
+            <div class="w-[46%] flex flex-col gap-6 p-8">
                 
-              <div class="bg-zinc-900 rounded-lg p-6" style="box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);">
+              <div class="bg-zinc-900 rounded-lg p-6">
                 <h3 class="text-base font-semibold mb-2">Product Ratings</h3>
                 <div class="flex items-center mb-2">
-                  <span class="text-yellow-400 text-xl">★ ★ ★ ★</span>
-                  <span class="text-gray-600 text-xl">★</span>
+                  <app-star-rating></app-star-rating>
                   <span class="ml-2 text-gray-400 text-sm">42807 Ratings</span>
                 </div>       
       
@@ -153,100 +152,22 @@
     </section>
 
 
-    <!-- <section>
-      <div class="bg-black text-white p-6 min-h-screen">
-        <h2 class="text-xl font-semibold mb-6">Recent Review & Ratings</h2>       
+    <section class="mt-10">
+      <p class="font-medium text-2xl rounded-md text-[#ffffffc9] !mb-4">Related Products</p>
 
-        <div class="flex flex-col lg:flex-row gap-6">       
+      <div class="w-full">
 
-          <div class="flex flex-col gap-4 flex-1">       
+          <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6" >
 
-            <div class="bg-zinc-900 rounded-lg p-4 shadow">
-              <div class="flex items-center gap-4 mb-2">
-                <img src="https://i.pravatar.cc/48" alt="User" class="w-10 h-10 rounded-full">
-                <div>
-                  <p class="font-bold">item.user.firstName</p>
-                  <p class="text-sm text-gray-400">April 5, 2023</p>
-                </div>
-              </div>       
+            <!-- Product Card -->
+            <div class="bg-gray-900 p-4 rounded-lg" *ngFor="let item of relatedProcuts | slice:0:8">
+              <app-product-card [product]="item"></app-product-card>
+            </div> 
 
-              <div class="flex items-center mb-2">
-                <span class="text-yellow-400">★ ★ ★ ★</span>
-                <span class="text-gray-600">★</span>
-              </div>       
-
-              <p class="text-gray-300">item.review</p>
-            </div>       
-      
-
-          </div>       
-      
-
-          <div class="bg-zinc-900 rounded-lg p-6 shadow w-full lg:w-[300px]">
-            <h3 class="text-lg font-semibold mb-2">Product Ratings</h3>
-            <div class="flex items-center mb-4">
-              <span class="text-yellow-400 text-xl">★ ★ ★ ★</span>
-              <span class="text-gray-600 text-xl">★</span>
-              <span class="ml-2 text-gray-400 text-sm">42807 Ratings</span>
-            </div>       
-      
-
-            <div class="space-y-2 text-sm">       
-
-              <div>
-                <div class="flex justify-between">
-                  <span>Excellent</span>
-                  <span>19259</span>
-                </div>
-                <div class="h-2 bg-gray-800 rounded">
-                  <div class="h-full bg-purple-600 rounded w-3/5"></div>
-                </div>
-              </div>       
-
-              <div>
-                <div class="flex justify-between">
-                  <span>Very Good</span>
-                  <span>19259</span>
-                </div>
-                <div class="h-2 bg-gray-800 rounded">
-                  <div class="h-full bg-purple-600 rounded w-3/5"></div>
-                </div>
-              </div>       
-
-              <div>
-                <div class="flex justify-between">
-                  <span>Good</span>
-                  <span>19259</span>
-                </div>
-                <div class="h-2 bg-gray-800 rounded">
-                  <div class="h-full bg-purple-600 rounded w-3/5"></div>
-                </div>
-              </div>       
-
-              <div>
-                <div class="flex justify-between">
-                  <span>Average</span>
-                  <span>19259</span>
-                </div>
-                <div class="h-2 bg-gray-800 rounded">
-                  <div class="h-full bg-purple-600 rounded w-3/5"></div>
-                </div>
-              </div>       
-
-              <div>
-                <div class="flex justify-between">
-                  <span>Poor</span>
-                  <span>19259</span>
-                </div>
-                <div class="h-2 bg-gray-800 rounded">
-                  <div class="h-full bg-purple-600 rounded w-3/5"></div>
-                </div>
-              </div>
-            </div>
           </div>
-        </div>
+
       </div>
 
-    </section> -->
+    </section>
 
 </div>

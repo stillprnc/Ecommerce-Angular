@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
+import { StarRatingComponent } from '../../../../shared/Component/star-rating/star-rating.component';
 
 @Component({
   selector: 'app-product-review-card',
   standalone: true,
-  imports: [],
+  imports: [StarRatingComponent],
   templateUrl: './product-review-card.component.html',
   styleUrl: './product-review-card.component.css'
 })

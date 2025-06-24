@@ -1,0 +1,12 @@
+<span
+  *ngFor="let star of stars"
+  (click)="rate(star)"
+  class="text-[22px] cursor-pointer transition-all"
+  [ngClass]="{
+    'text-white': star <= currentRating,
+    'text-transparent stroke-white': star > currentRating
+  }"
+  style="-webkit-text-stroke: 1px white;"
+>
+  ★
+</span>
