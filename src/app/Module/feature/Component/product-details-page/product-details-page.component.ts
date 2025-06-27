@@ -7,6 +7,7 @@ import { ProductReviewCardComponent } from './product-review-card/product-review
 import { mensPantsPage1 } from '../../../../../Data/pants/men_page1';
 import { ProductCardComponent } from '../../../shared/Component/product-card/product-card.component';
 import { StarRatingComponent } from '../../../shared/Component/star-rating/star-rating.component';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-product-details-page',
@@ -20,12 +21,14 @@ export class ProductDetailsPageComponent implements OnInit {
   reviews = [1, 1]
   relatedProcuts:any
 
+  constructor(private router:Router){}
+
   ngOnInit(): void {
     this.relatedProcuts = mensPantsPage1;
   }
   
 
   handleAddToCartAdmin(){
-    
+    this.router.navigate(['cart'])
   }
 }

@@ -1,4 +1,4 @@
-<div class="transition-transform duration-300 hover:scale-105 hover:shadow-lg rounded p-2 bg-gray-900">
+<div (click)="navigate()" class="cursor-pointer transition-transform duration-300 hover:scale-105 hover:shadow-lg rounded p-2 bg-gray-900">
   <img class="mb-4 rounded w-full object-cover h-[316px]" [src]="product.imageUrl" alt="Kurta" />
   <p class="text-sm text-gray-400"> {{product.brand}} </p>
   <p class="font-semibold text-white"> {{product.title}} </p>

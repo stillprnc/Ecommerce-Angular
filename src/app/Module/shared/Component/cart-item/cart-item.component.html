@@ -1,0 +1,21 @@
+  <div class="flex items-start space-x-4 pb-4">
+    <img class="mb-4 rounded object-cover h-[130px]" src="https://rukminim1.flixcart.com/image/612/612/xif0q/jean/h/y/g/34-jeans-bt008-laheja-original-imagqqbsfgmdhcvn.jpeg?q=70" alt="Yellow Kurta" />
+    <div class="flex-1">
+      <p class="font-semibold">Men Solid Cotton Blend Straight Kurta</p>
+      <p class="text-sm text-gray-400">Size: S, Yellow</p>
+      <p class="text-sm text-gray-400 mb-1">Seller: KSH Trendz</p>
+      <div class="flex items-center space-x-2">
+        <span class="line-through text-gray-400 text-sm">₹1499</span>
+        <span class="text-lg font-bold text-white">₹265</span>
+        <span class="text-green-500 text-sm font-semibold">82% off</span>
+      </div>
+      <div class="flex items-center mt-2 space-x-3">
+        <button (click)="updateNoOfCartItem('-')" class="w-6 h-6 rounded bg-gray-700 text-white">-</button>
+        <span class="text-white">{{cartItemCount}}</span>
+        <button (click)="updateNoOfCartItem('+')" class="w-6 h-6 rounded bg-green-600 text-white">+</button>
+        <button (click)="removeCartItem()" class="ml-4 text-sm border border-gray-500 rounded px-3 py-1 hover:bg-gray-700">Remove</button>
+      </div>
+    </div>
+  </div>
+
+
