@@ -1,1 +1,26 @@
-<p class="py-10">order works!</p>
+<div class="py-6 px-24 bg-black space-y-8">
+
+    <p class="font-medium text-2xl text-[#ffffffc9] !mb-8">My Order History</p>
+
+    <div class="flex justify-between">
+        <div class="w-[20%]">
+            <div *ngFor="let option of orderFilter">
+                <mat-checkbox [id]="option.value" [value]="option.value" class="custom-checkbox">
+                    <span class="text-[16px] font-medium">{{ option.label }}</span>
+                </mat-checkbox>
+            </div>
+        </div>
+    
+        <div class="w-[70%]">
+    
+            <div *ngFor="let item of orders">
+                <div (click)="navigateToOrderDetails(6)" class="mb-4 cursor-pointer" *ngFor="let orderItem of item">
+                    <app-order-card></app-order-card>
+                </div>
+            </div>
+    
+        </div>
+    </div>
+
+
+</div>

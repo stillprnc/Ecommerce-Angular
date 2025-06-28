@@ -2,7 +2,7 @@
     <div class="cart-items w-[54%]">
         <div class="text-white px-8 pt-8 bg-[#00000022] rounded-md" style="box-shadow: 0 8px 16px rgba(36, 36, 36, 0.3), 0 -8px 16px rgba(36, 36, 36, 0.2), 8px 0 16px rgba(0,0,0,0.2), -8px 0 16px rgba(0,0,0,0.2);">
             <div *ngFor="let product of cart; let last=last">
-                <app-cart-item></app-cart-item>
+                <app-cart-item showAddRemoveButton="true"></app-cart-item>
                 <mat-divider *ngIf="!last" class="!mb-8"></mat-divider>
             </div>
         </div>

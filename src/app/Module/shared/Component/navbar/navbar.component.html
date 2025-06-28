@@ -30,9 +30,9 @@
             </button>
             </div>
 
-            <mat-menu #profileMenu="matMenu">
+            <mat-menu class="!mt-1" #profileMenu="matMenu">
               <button mat-menu-item>Profile</button>
-              <button mat-menu-item>Order</button>
+              <button (click)="navigatTo('account/orders')" mat-menu-item>Order</button>
               <button mat-menu-item>Logout</button>
             </mat-menu>
 

@@ -1,1 +1,56 @@
-<p class="py-10">payment works!</p>
+<div class="py-6 px-24 bg-black space-y-8">
+    
+
+    <div class="bg-gray-900 p-6 rounded shadow-md w-[100%] font-bold">
+        <app-address-card></app-address-card>
+    </div>
+
+    <div class="flex gap-20">
+
+        <div class="product bg-gray-900 px-6 pt-4 rounded shadow-md">
+            <div *ngFor="let product of products; let last=last">
+                <app-cart-item></app-cart-item>
+                <mat-divider *ngIf="!last" class="!mb-8"></mat-divider>
+            </div>
+        </div>
+        
+        
+        <div style="box-shadow: 0 8px 16px rgba(36, 36, 36, 0.3), 0 -8px 16px rgba(36, 36, 36, 0.2), 8px 0 16px rgba(0,0,0,0.2), -8px 0 16px rgba(0,0,0,0.2);" class="bg-gray-900 text-white p-6 rounded-md w-[32%] h-[20rem] space-y-4">
+    
+          <!-- Heading -->
+          <p class="text-sm text-gray-400 font-semibold">PRICE DETAILS</p>
+          <hr class="border-gray-700" />
+        
+          <!-- Price Items -->
+          <div class="space-y-2">
+            <div class="flex justify-between">
+              <span>Total price</span>
+              <span>₹4497</span>
+            </div>
+            <div class="flex justify-between">
+              <span>Discount</span>
+              <span class="text-green-500">-₹3413</span>
+            </div>
+            <div class="flex justify-between">
+              <span>Delivery Charges</span>
+              <span class="text-green-500">Free</span>
+            </div>
+          </div>
+        
+          <!-- Total Amount -->
+          <hr class="border-gray-700" />
+          <div class="flex justify-between font-semibold text-lg">
+            <span>Total Amount</span>
+            <span class="text-green-500">₹1084</span>
+          </div>
+        
+          <!-- Checkout Button -->
+          <button class="w-full bg-green-400 hover:bg-green-500 text-black py-2 font-semibold rounded">
+            CHECKOUT
+          </button>
+        
+        </div>
+
+    </div>
+
+</div>

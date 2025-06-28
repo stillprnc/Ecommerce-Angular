@@ -9,12 +9,14 @@
         <span class="text-lg font-bold text-white">₹265</span>
         <span class="text-green-500 text-sm font-semibold">82% off</span>
       </div>
-      <div class="flex items-center mt-2 space-x-3">
+
+      <div *ngIf="showAddRemoveButton" class="flex items-center mt-2 space-x-3">
         <button (click)="updateNoOfCartItem('-')" class="w-6 h-6 rounded bg-gray-700 text-white">-</button>
         <span class="text-white">{{cartItemCount}}</span>
         <button (click)="updateNoOfCartItem('+')" class="w-6 h-6 rounded bg-green-600 text-white">+</button>
         <button (click)="removeCartItem()" class="ml-4 text-sm border border-gray-500 rounded px-3 py-1 hover:bg-gray-700">Remove</button>
       </div>
+
     </div>
   </div>
 

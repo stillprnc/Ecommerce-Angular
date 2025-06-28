@@ -5,6 +5,7 @@ import {MatIconModule} from '@angular/material/icon';
 import { MatMenuModule } from '@angular/material/menu';
 import { CommonModule } from '@angular/common';
 import { NavContentComponent } from './nav-content/nav-content.component';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-navbar',
@@ -15,6 +16,8 @@ import { NavContentComponent } from './nav-content/nav-content.component';
 })
 
 export class NavbarComponent {
+
+  constructor (private router:Router){}
 
   currentSection:any
   isNavbarContentOpen:any
@@ -52,5 +55,9 @@ export class NavbarComponent {
   navigatToCart(path:any)
   {
 
+  }
+
+  navigatTo(path:any){
+    this.router.navigate([path])
   }
 }
