@@ -1,7 +1,8 @@
 <div class="py-6 px-24 bg-black">
-    <p class="font-medium text-2xl text-[#ffffffc9] !mb-8"> Order Status </p>
+    <p class="font-medium text-2xl text-[#ffffffc9] !mb-10"> Order Status </p>
+    <app-order-tracker acitveStep="3" [steps]="steps"></app-order-tracker>
 
-    <div class="p-6 rounded-md shadow-[0_4px_12px_rgba(255,255,255,0.05)] ring-1 ring-gray-700">
+    <div class="mt-16 p-6 rounded-md shadow-[0_4px_12px_rgba(255,255,255,0.05)] ring-1 ring-gray-700">
         <p class="font-medium text-xl text-[#ffffffc9] !mb-4"> Shipping Address </p>
         <div>
             <app-address-card></app-address-card>

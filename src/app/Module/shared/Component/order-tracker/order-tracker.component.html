@@ -1,0 +1,33 @@
+<div class="flex justify-between gap-2">
+
+  <div *ngFor="let step of steps; let i = index; let last = last" class="flex items-center gap-8">
+
+    <!-- Step Icon + Title -->
+    <div class="flex items-center gap-4">
+      <div
+        [ngClass]="{
+          'bg-green-500': i <= acitveStep-1,
+          'bg-gray-500': i > acitveStep-1
+        }"
+        class="rounded-full p-3 flex items-center"
+      >
+        <mat-icon fontIcon="check"></mat-icon>
+      </div>
+
+      <span class="text-base text-white font-medium">
+        {{ step.title }}
+      </span>
+
+    </div>
+
+    <!-- Divider -->
+    <div *ngIf="!last" class="h-1 md:w-[10vw]"
+         [ngClass]="{
+           'bg-green-500': i < acitveStep-1,
+           'bg-gray-500': i >= acitveStep-1
+         }">
+    </div>
+
+  </div>
+  
+</div>
